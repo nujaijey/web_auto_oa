@@ -16,15 +16,21 @@ public class LoginPage extends BasePage {
         super(driver);
     }
 
-    public void typeUsername(String data) {
-        typeData(usernameBy,data);
+    public void typeUsername(String username) {
+        typeData(usernameBy,username);
     }
 
-    public void typePassword(String data) {
-        typeData(passwordBy,data);
+    public void typePassword(String password) {
+        typeData(passwordBy,password);
     }
 
     public void clickLogin() {
         clickElement(loginBy);
+    }
+
+    public void loginSuccess(String username,String password) {
+        typeUsername(username);
+        typePassword(password);
+        clickLogin();
     }
 }
