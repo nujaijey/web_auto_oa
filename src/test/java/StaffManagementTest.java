@@ -4,10 +4,11 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pageobject.BasePage;
+import pageobject.IndexPage;
 import pageobject.LoginPage;
 import utils.Constant;
 
-public class PersonnelManagementTest extends BaseTest {
+public class StaffManagementTest extends BaseTest {
     WebDriver driver;
 
     @BeforeMethod
@@ -22,6 +23,14 @@ public class PersonnelManagementTest extends BaseTest {
         // 4、登录
         LoginPage loginPage = new LoginPage(driver);
         loginPage.loginSuccess(Constant.CORRECT_USERNAME,Constant.CORRECT_PASSWORD);
+        // 5、进入员工管理页面
+        IndexPage indexPage = new IndexPage(driver);
+        indexPage.clickStaffManagement();
+    }
+
+    @Test
+    public void addStaffSuccess() {
+
     }
 
 

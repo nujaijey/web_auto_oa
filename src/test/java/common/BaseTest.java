@@ -17,7 +17,9 @@ public class BaseTest {
      * @return 驱动对象
      */
     public WebDriver openBrowser(String browserName) {
-        if (browserName.equals("chrome")) {
+        if (browserName.equals("chrome"
+
+        )) {
             // 打开Chrome浏览器
             System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
 //            System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver_87.exe");
